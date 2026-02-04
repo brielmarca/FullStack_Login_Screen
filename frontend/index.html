@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="login">
+    <h1 id="form-title">Login</h1>
+    <form id="login-form" data-mode="login">
+      <div class="tabs" role="tablist" aria-label="Acesso">
+        <button type="button" class="tab active" data-mode="login" aria-selected="true">Login</button>
+        <button type="button" class="tab" data-mode="register" aria-selected="false">Registrar</button>
+      </div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="seu@email.com" required />
+
+      <label for="password">Senha</label>
+      <input id="password" name="password" type="password" placeholder="Sua senha" required />
+
+      <div class="actions">
+        <button type="submit" id="submit-button">Entrar</button>
+      </div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
