@@ -9,7 +9,7 @@
             "name": "Application",
             "request": "launch",
             "mainClass": "com.teuapp.Application",
-            "projectName": "backend"
+            "projectName": "server"
         },
         {
             "type": "chrome",

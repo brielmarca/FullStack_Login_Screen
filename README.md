@@ -55,7 +55,7 @@ CREATE TABLE users (
 A estrutura de pastas foi criada conforme padrão profissional:
 
 ```
-backend/
+server/
 └── src/main/java/com/teuapp
     ├── controller
     ├── service
@@ -97,7 +97,7 @@ Fluxo:
 Estrutura criada:
 
 ```
-frontend/
+client/
 ├── index.html
 ├── css/
 │   └── style.css
@@ -107,19 +107,5 @@ frontend/
 └── assets/
 ```
 
-O frontend será simples e direto: HTML + CSS + JS.
 
----
 
-## 🚦 Próximos passos
-
-1. Criar banco e tabela `users`
-2. Criar backend Spring Boot
-3. Implementar endpoint de login
-4. Testar com Postman
-5. Criar tela de login
-6. Integrar tudo
-
----
-
-Se quiser, posso começar pelo **passo 1** (criar o banco) e seguir a ordem correta.
