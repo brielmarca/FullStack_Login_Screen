@@ -1,43 +1,48 @@
-# Fullstack Login (Java + Spring Boot + MySQL + Frontend)
+# Fullstack Login System
 
-Este repositório contém o **esqueleto** do projeto de login seguindo a ordem correta:
+A fullstack authentication system built with **Java, Spring Boot, and MySQL**, designed with clean architecture principles and a strong focus on backend best practices.
 
-1. **Database (MySQL)**
-2. **Backend (Java + Spring Boot)**
-3. **API REST**
-4. **Frontend**
-
-A ideia aqui é manter a arquitetura limpa, com cada camada fazendo apenas sua responsabilidade.
+This project demonstrates the implementation of a secure and well-structured login flow, from database modeling to REST API and frontend integration.
 
 ---
 
-## ✅ Arquitetura Geral
+## ✨ Features
 
-```
-[ Frontend ]
-     ↓ HTTP (JSON)
-[ API REST ]
-     ↓
-[ Backend ]
-     ↓
-[ Database ]
-```
+- User authentication (login)
+- User registration
+- RESTful API using Spring Boot
+- Layered backend architecture
+- Password hashing for security
+- SQL database integration
+- Frontend consuming the API via HTTP (JSON)
 
 ---
 
-## 🗄️ 1️⃣ Database (Modelagem)
+## 🧰 Tech Stack
 
-**Nome do banco (sugestão):** `fullstack_login`
+### Backend
+- Java
+- Spring Boot
+- Spring Data JPA
+- REST API
+- MySQL
 
-**Tabela:** `users`
+### Frontend
+- HTML
+- CSS
+- JavaScript
 
-**Campos:**
-- `id` (PK)
-- `email` (unique)
-- `password` (hash)
-- `created_at`
+### Tools & Practices
+- Git & GitHub
+- Clean Architecture
+- RESTful design principles
 
-**Modelo SQL (exemplo):**
+---
+
+## 🗄️ Database Design
+
+**Database name:** `fullstack_login`  
+**Table:** `users`
 
 ```sql
 CREATE TABLE users (
@@ -46,66 +51,3 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-```
-
----
-
-## ☕ 2️⃣ Backend (Java + Spring Boot)
-
-A estrutura de pastas foi criada conforme padrão profissional:
-
-```
-server/
-└── src/main/java/com/teuapp
-    ├── controller
-    ├── service
-    ├── repository
-    ├── domain
-    ├── dto
-    ├── exception
-    ├── security
-    └── config
-```
-
-**Responsabilidades:**
-- `controller` → recebe requisições HTTP
-- `service` → regras de negócio
-- `repository` → acesso ao banco
-- `domain` → entidades (User)
-- `dto` → dados que entram/saem da API
-- `exception` → erros personalizados
-- `security` → login, senha, auth
-- `config` → configurações gerais
-
----
-
-## 🌐 3️⃣ API REST
-
-Endpoints planejados:
-- `POST /auth/login`
-- `POST /auth/register` (opcional depois)
-
-Fluxo:
-1. Recebe JSON do frontend
-2. Chama o service
-3. Retorna **sucesso** ou **erro**
-
----
-
-## 🖥️ 4️⃣ Frontend
-
-Estrutura criada:
-
-```
-client/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   ├── api.js
-│   └── login.js
-└── assets/
-```
-
-
-
