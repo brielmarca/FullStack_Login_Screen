@@ -1,53 +1,37 @@
-# Fullstack Login System
+# Full-Stack Login Screen
 
-A fullstack authentication system built with **Java, Spring Boot, and MySQL**, designed with clean architecture principles and a strong focus on backend best practices.
+Authentication study project that documents the basic pieces of a full-stack login flow: user records, password hashing, a server endpoint and a browser interface.
 
-This project demonstrates the implementation of a secure and well-structured login flow, from database modeling to REST API and frontend integration.
+## Purpose
 
----
+This repository is a learning prototype, not a production authentication service. It is intended to make the responsibilities of each layer easy to understand before introducing a larger framework.
 
-## ✨ Features
+## Planned flow
 
-- User authentication (login)
-- User registration
-- RESTful API using Spring Boot
-- Layered backend architecture
-- Password hashing for security
-- SQL database integration
-- Frontend consuming the API via HTTP (JSON)
+1. The user submits credentials from the interface.
+2. The server validates the request.
+3. The stored password hash is compared with bcrypt.
+4. The application returns a controlled success or failure response.
 
----
+## Technology
 
-## 🧰 Tech Stack
+- HTML, CSS and JavaScript
+- Node.js
+- bcrypt
+- Relational database concepts
 
-### Backend
-- Java
-- Spring Boot
-- Spring Data JPA
-- REST API
-- MySQL
+## Setup
 
-### Frontend
-- HTML
-- CSS
-- JavaScript
+Requirements: Node.js 18+ and npm.
 
-### Tools & Practices
-- Git & GitHub
-- Clean Architecture
-- RESTful design principles
+    npm install
 
----
+Create local environment variables for database and authentication settings. Do not place credentials directly in source files.
 
-## 🗄️ Database Design
+## Security notes
 
-**Database name:** `fullstack_login`  
-**Table:** `users`
+A real authentication system also needs input validation, secure sessions or tokens, rate limiting, CSRF protection where applicable, password-reset controls, logging and HTTPS. Those requirements are outside the current prototype and should be added before any production use.
 
-```sql
-CREATE TABLE users (
-  id BIGINT AUTO_INCREMENT PRIMARY KEY,
-  email VARCHAR(255) NOT NULL UNIQUE,
-  password VARCHAR(255) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+## Status
+
+Educational skeleton under development. The repository currently focuses on project structure and authentication concepts rather than a complete deployable application.
