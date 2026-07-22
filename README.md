@@ -1,37 +1,91 @@
-# Full-Stack Login Screen
+<h1 align="center">Full-Stack Login Screen</h1>
+<h3 align="center">Educational authentication flow built with Node.js, JavaScript and bcrypt</h3>
 
-Authentication study project that documents the basic pieces of a full-stack login flow: user records, password hashing, a server endpoint and a browser interface.
+<p align="center">
+  <a href="https://github.com/brielmarca"><img src="https://img.shields.io/badge/Developer-Gabriel%20Marca-181717?style=for-the-badge&logo=github&logoColor=white" alt="Gabriel Marca on GitHub" /></a>
+</p>
 
-## Purpose
+> A learning project that demonstrates the responsibilities of a complete login flow, including the interface, server validation, password hashing and controlled authentication responses.
 
-This repository is a learning prototype, not a production authentication service. It is intended to make the responsibilities of each layer easy to understand before introducing a larger framework.
+---
 
-## Planned flow
+## Project Overview
 
-1. The user submits credentials from the interface.
-2. The server validates the request.
-3. The stored password hash is compared with bcrypt.
-4. The application returns a controlled success or failure response.
+This repository was created to study how frontend and backend layers cooperate during authentication. The project focuses on understanding credential submission, request validation, password-hash comparison and safe success or failure responses.
 
-## Technology
+## Main Features
 
-- HTML, CSS and JavaScript
-- Node.js
-- bcrypt
-- Relational database concepts
+- [x] Login interface built with HTML, CSS and JavaScript
+- [x] Server-side credential validation flow
+- [x] Password hashing and comparison with bcrypt
+- [x] Separation between interface and authentication logic
+- [x] Environment-based configuration guidance
+- [x] Security considerations documented for future development
 
-## Setup
+## Technology Stack
 
-Requirements: Node.js 18+ and npm.
+### Frontend
 
-    npm install
+<p>
+  <img src="https://img.shields.io/badge/HTML5-Markup-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-Language-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+</p>
 
-Create local environment variables for database and authentication settings. Do not place credentials directly in source files.
+### Backend and Security
 
-## Security notes
+<p>
+  <img src="https://img.shields.io/badge/Node.js-Runtime-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/bcrypt-Password%20Hashing-003A70?style=for-the-badge" alt="bcrypt" />
+  <img src="https://img.shields.io/badge/Auth-Learning%20Project-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="Authentication project" />
+</p>
 
-A real authentication system also needs input validation, secure sessions or tokens, rate limiting, CSRF protection where applicable, password-reset controls, logging and HTTPS. Those requirements are outside the current prototype and should be added before any production use.
+## Authentication Flow
 
-## Status
+```text
+Browser Login Form
+        |
+        v
+Server Validation
+        |
+        v
+Password Hash Comparison
+        |
+        v
+Controlled Success or Failure Response
+```
 
-Educational skeleton under development. The repository currently focuses on project structure and authentication concepts rather than a complete deployable application.
+## How to Run the Project
+
+### Requirements
+
+- Node.js 18 or later
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/brielmarca/FullStack_Login_Screen.git
+cd FullStack_Login_Screen
+npm install
+```
+
+Configure the required local environment variables before running the project. Never commit credentials or secret values to the repository.
+
+## Security Notes
+
+This project is an educational prototype and is not a production authentication service. A production implementation should also include input validation, secure sessions or tokens, rate limiting, HTTPS, password-reset controls, logging and protection against common web attacks.
+
+## Project Status
+
+Educational project under development.
+
+## License
+
+This project is under the MIT License. See the `LICENSE` file for more details.
+
+## Contact
+
+Developed by **Gabriel Marca**.
+
+[Portfolio](https://brielmarca-portfolio.pages.dev) | [LinkedIn](https://www.linkedin.com/in/gabrielmarca/) | [GitHub](https://github.com/brielmarca) | [Email](mailto:brielmarcacontact@gmail.com)
